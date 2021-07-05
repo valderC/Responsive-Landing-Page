@@ -8,11 +8,13 @@ const port = process.env.PORT || 3007;
 //     res.render('public', {});
 //   });
 
-app.use(express.static('public')); 
+app.use(express.static('Public')); 
 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "Public"));
-});
+// app.use(express.static(path.join(__dirname, "Public", "build")))
+
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "Public", "index.html"));
+// });
 
 app.listen(port, () => {
     console.log(`Connected to port ${port}`);
