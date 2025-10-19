@@ -21,16 +21,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-        - name: Deploy to GitHub Pages
-          uses: peaceiris/actions-gh-pages@v4
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./Public
-            publish_branch: gh-pages
-            force_orphan: true
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./Public
+          publish_branch: gh-pages
+          force_orphan: true
 
-        - name: Display GitHub Pages URL
-          run: |
-            REPO_URL="https://valderC.github.io/Responsive-Landing-Page/"
-            echo "Your site is deployed at: $REPO_URL"
-            echo "::notice ::Your site is deployed at: $REPO_URL"
+      - name: Display GitHub Pages URL
+        run: |
+          REPO_URL="https://valderC.github.io/Responsive-Landing-Page/"
+          echo "Your site is deployed at: $REPO_URL"
+          echo "::notice ::Your site is deployed at: $REPO_URL"
